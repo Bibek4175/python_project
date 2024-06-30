@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+package/__init__.py
+package/calculate_string.py
+package/input_string.py
+package/len_string.py
+package.egg-info/PKG-INFO
+package.egg-info/SOURCES.txt
+package.egg-info/dependency_links.txt
+package.egg-info/top_level.txt
+test/test_string.py

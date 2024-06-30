@@ -6,6 +6,8 @@ setup(
    description='A simple dummy project',
    author = 'abc',
    packages = ['package'],
+   scripts = ['scripts/add_script'],
+   test=['test_string.py'],
  
 )
 
