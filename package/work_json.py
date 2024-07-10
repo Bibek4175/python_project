@@ -39,19 +39,16 @@ quiz_data = {
     }
 }
 
-with open("quiz.json",mode  = 'w',encoding='utf-8') as write_file:
-	json.dump(quiz_data,write_file)
+def write_file():
+
+    with open("quiz.json",mode  = 'w',encoding='utf-8') as write_file:
+	    json.dump(quiz_data,write_file)
+
+def read_file():
+
+    with open("quiz.json",mode='r',encoding='utf-8') as read_file:
+	    data = json.load(read_file)
 
 
-with open("quiz.json",mode='r',encoding='utf-8') as read_file:
-	data = json.load(read_file)
-
-print(type(data))
 
 
-name = {1:{"name":"RAM","Age":23,"Gender":"Male"}}
-
-name_str = json.dumps(name)
-print(type(name_str))			
-name_json = json.loads(name_str)
-print(type(name_json))
