@@ -1,19 +1,17 @@
 import json 
-
+from collections import defaultdict
 import os
 
-def append_json(file_path,data):
+def append_json(file_path,value,key):
+    data = defaultdict(list)
     if os.path.exists(file_path):
-        
-        with open(file_path,"a+",encoding='utf-8') as file:
-                
-                
-                json.dump(data,file)
-                file.write("\n")
+        with open(file_path,"r",encoding='utf-8') as file:
 
+            data = json.load(file)
 
+    data[key].append(value)
 
-    else:
-        with open(file_path,'w',encoding='utf-8') as file:
-            json.dump(data,file)
+    with open(file_path,"w",encoding = 'utf-8') as file:
+        json.dump(data,file)
+
 
